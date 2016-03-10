@@ -16,9 +16,9 @@ public class User implements Comparable<User>, Serializable {
 
     private int hashPrimeValue = 17;
 
-    public User(String name, String emailAddress, String firstName, String lastName) {
+    public User(String name, String email, String firstName, String lastName) {
         this.id = IdentityFactory.createId();
-        this.setName(name).setEmail(emailAddress).setFirstName(firstName).setLastName(lastName);
+        this.setName(name).setEmail(email).setFirstName(firstName).setLastName(lastName);
     }
 
     public String id() {
@@ -69,6 +69,8 @@ public class User implements Comparable<User>, Serializable {
         return diff;
     }
 
+    // ____________________________________________________
+
     @Override
     public boolean equals(Object anObject) {
 
@@ -85,6 +87,7 @@ public class User implements Comparable<User>, Serializable {
 
     @Override
     public int hashCode() {
+
         int hashCodeValue =
                 +(57691 * this.hashPrimeValue)
                         + this.email().hashCode()
@@ -96,6 +99,7 @@ public class User implements Comparable<User>, Serializable {
 
     @Override
     public String toString() {
+
         return String.format("{ name: '%s', firstName: '%s', lastName: '%s', emailAddress: '%s', id: '%s'}",
                 this.name, this.firstName, this.lastName, this.email, this.id);
     }
