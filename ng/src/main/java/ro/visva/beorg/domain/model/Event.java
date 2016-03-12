@@ -1,24 +1,29 @@
 package ro.visva.beorg.domain.model;
 
-/** An action is the foundation of anything that may happen in the context.<br>
- * This can be a task, an activity or an event.
+import org.joda.time.DateTime;
+import ro.visva.beorg.domain.model.activities.WorkItemState;
+
+/**
+ * An event is the foundation of anything that may happen.<br>
+ * It can be any change that happened to a task, a new activity, and so on.
  * <br><br>
  * 2016-03-10 22:06 | visvadw | Creation time.
  */
-public abstract class Action {
+public class Event {
 
     private String id;
     private String title;
     private String description;
-    private ActionState state;
+    private WorkItemState state;
+    private DateTime eventTime;
 
-    public Action(String title) {
+    public Event(String title) {
         this.id = IdentityFactory.createId();
         this.setTitle(title);
-        this.state = ActionState.CREATED;
+        this.state = WorkItemState.CREATED;
     }
 
-    public Action(String title, String description) {
+    public Event(String title, String description) {
         this(title);
         this.setDescription(description);
     }
@@ -35,6 +40,10 @@ public abstract class Action {
         return this.description;
     }
 
+    public DateTime eventTime() {
+        return eventTime;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -43,7 +52,12 @@ public abstract class Action {
         this.description = description;
     }
 
-    public void setState(ActionState state) {
+    public void setState(WorkItemState state) {
         this.state = state;
     }
+
+    public void setEventTime(DateTime eventTime) {
+        this.eventTime = eventTime;
+    }
+
 }
