@@ -12,6 +12,7 @@
     <artifactId>ng</artifactId>
 
     <properties>
+        <joda-time.version>2.9.2</joda-time.version>
         <cassandra.jdbc.client.version>3.0.0</cassandra.jdbc.client.version>
     </properties>
 
@@ -20,7 +21,7 @@
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.9.2</version>
+            <version>${joda-time.version}</version>
         </dependency>
 
         <!-- Cassandra related packages -->
