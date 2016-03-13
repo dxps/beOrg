@@ -1,4 +1,4 @@
-package ro.visva.beorg.domain.model.plans;
+package ro.visva.beorg.domain.plans;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;

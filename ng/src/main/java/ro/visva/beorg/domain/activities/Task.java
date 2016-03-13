@@ -1,6 +1,6 @@
-package ro.visva.beorg.domain.model.activities;
+package ro.visva.beorg.domain.activities;
 
-import ro.visva.beorg.domain.model.plans.Project;
+import ro.visva.beorg.domain.plans.Project;
 
 import java.util.HashMap;
 import java.util.Map;
