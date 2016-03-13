@@ -11,12 +11,26 @@
 
     <artifactId>ng</artifactId>
 
+    <properties>
+        <cassandra.jdbc.client.version>3.0.0</cassandra.jdbc.client.version>
+    </properties>
+
     <dependencies>
+
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.9.2</version>
         </dependency>
+
+        <!-- Cassandra related packages -->
+
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
+            <version>${cassandra.jdbc.client.version}</version>
+        </dependency>
+
     </dependencies>
 
 

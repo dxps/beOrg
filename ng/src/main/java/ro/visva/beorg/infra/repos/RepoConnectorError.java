@@ -4,13 +4,13 @@ package ro.visva.beorg.infra.repos;
  * <br><br>
  * 2016-03-13 16:54 | visvadw | Creation time.
  */
-public class RepositoryConnectorError {
+public class RepoConnectorError {
 
     private String errorCode;
 
     private String errorMessage;
 
-    public RepositoryConnectorError(final String errorCode, final String errorMessage) {
+    public RepoConnectorError(final String errorCode, final String errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }

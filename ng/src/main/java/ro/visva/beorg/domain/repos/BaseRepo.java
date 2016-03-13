@@ -1,7 +1,7 @@
 package ro.visva.beorg.domain.repos;
 
-import ro.visva.beorg.infra.repos.RepositoryConnector;
-import ro.visva.beorg.infra.repos.RepositoryConnectorError;
+import ro.visva.beorg.infra.repos.RepoConnector;
+import ro.visva.beorg.infra.repos.RepoConnectorError;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import java.util.List;
  * <br><br>
  * 2016-03-13 16:50 | visvadw | Creation time.
  */
-public interface BaseRepository {
+public interface BaseRepo {
 
     /** Initialize the repository. */
-    public boolean init(RepositoryConnector connector);
+    public boolean init(RepoConnector connector);
 
     /** Is this repository initialized? */
     public boolean isInited();
@@ -21,6 +21,6 @@ public interface BaseRepository {
     public boolean hasErrors();
 
     /** Get the errors this repository may have. */
-    public List<RepositoryConnectorError> errors();
+    public List<RepoConnectorError> errors();
 
 }

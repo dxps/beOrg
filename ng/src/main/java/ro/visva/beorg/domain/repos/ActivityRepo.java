@@ -9,7 +9,7 @@ import java.util.List;
  * <br><br>
  * 2016-03-13 16:47 | visvadw | Creation time.
  */
-public interface ActivityRepository extends BaseRepository {
+public interface ActivityRepo extends BaseRepo {
 
     boolean add(Activity activity);
 

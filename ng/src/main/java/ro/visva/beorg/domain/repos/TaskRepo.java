@@ -9,7 +9,7 @@ import java.util.List;
  * <br><br>
  * 2016-03-13 17:08 | visvadw | Creation time.
  */
-public interface TaskRepository {
+public interface TaskRepo {
 
     boolean add(Task task);
 
