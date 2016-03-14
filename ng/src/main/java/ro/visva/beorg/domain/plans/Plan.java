@@ -2,6 +2,10 @@ package ro.visva.beorg.domain.plans;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
+import ro.visva.beorg.domain.activities.Task;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <br><br>
@@ -16,17 +20,33 @@ public class Plan {
     private PlanType type;
     private PlanState state;
 
+    private Map<String, Task> tasks = new HashMap<>(1);
+
     private DateTime beginTime;
     private DateTime endTime;
 
+    /** Create a new plan. */
+    public Plan(PlanType type, String name, String description) {
+        this(type, name);
+        this.description = description;
+    }
+
+    /** Create a new plan. */
     public Plan(PlanType type, String name) {
         this.type = type;
         this.name = name;
     }
 
-    public Plan(PlanType type, String name, String description) {
-        this(type, name);
-        this.description = description;
+    /** Add a task to the plan. */
+    public void addTask(Task task) {
+        if (task == null) return;
+        tasks.put(task.id(), task);
+    }
+
+    /** Remove a task from the plan. */
+    public void removeTask(Task task) {
+        if (task == null) return;
+        tasks.remove(task.id(), task);
     }
 
     /** Get the identifier. */
@@ -74,6 +94,24 @@ public class Plan {
     public long durationInMinutes() {
         if ((beginTime == null) || (endTime == null)) return -1;
         return new Duration(beginTime, endTime).getStandardMinutes();
+    }
+
+    /**
+     * Get the duration of this work item in hours.<br>
+     * <i>Note:</i> It returns -1 if begin or end times are not defined.
+     */
+    public long durationInHours() {
+        if ((beginTime == null) || (endTime == null)) return -1;
+        return new Duration(beginTime, endTime).getStandardHours();
+    }
+
+    /**
+     * Get the duration of this work item in days.<br>
+     * <i>Note:</i> It returns -1 if begin or end times are not defined.
+     */
+    public long durationInDays() {
+        if ((beginTime == null) || (endTime == null)) return -1;
+        return new Duration(beginTime, endTime).getStandardDays();
     }
 
     /** Set the description. */

@@ -12,7 +12,7 @@ public enum PlanType {
 
     PLAN((byte) 0, "Plan"),
     INITIATIVE((byte) 1, "Initiative"),
-    PROJECT((byte) 0, "Project");
+    PROJECT((byte) 2, "Project");
 
     private byte id;
     private String name;
