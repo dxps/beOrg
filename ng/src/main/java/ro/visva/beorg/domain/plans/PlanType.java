@@ -10,8 +10,9 @@ import java.util.Map;
  */
 public enum PlanType {
 
-    PROJECT((byte) 0, "Project"),
-    INITIATIVE((byte) 1, "Initiative");
+    PLAN((byte) 0, "Plan"),
+    INITIATIVE((byte) 1, "Initiative"),
+    PROJECT((byte) 0, "Project");
 
     private byte id;
     private String name;

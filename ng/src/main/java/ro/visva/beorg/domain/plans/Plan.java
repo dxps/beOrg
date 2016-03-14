@@ -7,7 +7,7 @@ import org.joda.time.Duration;
  * <br><br>
  * 2016-03-12 21:41 | visvadw | Creation time.
  */
-public abstract class Plan {
+public class Plan {
 
     private String id;
     private String name;
