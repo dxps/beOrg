@@ -6,6 +6,7 @@ import ro.visva.beorg.infra.repos.RepoConnectorError;
 import java.util.List;
 
 /**
+ * Common repository operations.
  * <br><br>
  * 2016-03-13 16:50 | visvadw | Creation time.
  */

@@ -9,7 +9,7 @@ import java.util.List;
  * <br><br>
  * 2016-03-13 17:08 | visvadw | Creation time.
  */
-public interface TaskRepo {
+public interface TaskRepo extends BaseRepo {
 
     boolean add(Task task);
 
