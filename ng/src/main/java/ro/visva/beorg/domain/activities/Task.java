@@ -25,6 +25,7 @@ public class Task extends WorkItem implements Comparable<Task> {
     public Task(Project project, String name) {
         super(WorkItemType.TASK, name);
         this.project = project;
+        this.project.addTask(this);
     }
 
     /** Create a new task. */
@@ -38,6 +39,7 @@ public class Task extends WorkItem implements Comparable<Task> {
         super(WorkItemType.TASK, name);
         this.project = parentTask.project();
         this.parentTask = parentTask;
+        this.parentTask.addSubtask(this);
     }
 
     /** Create a new task. */
