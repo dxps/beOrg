@@ -63,7 +63,7 @@ public abstract class WorkItem {
     }
 
     /**
-     * Get the duration of this work item in seconds.<br>
+     * Get the duration in seconds.<br>
      * <i>Note:</i> It returns -1 if begin or end times are not defined.
      */
     public long durationInSeconds() {
@@ -72,12 +72,30 @@ public abstract class WorkItem {
     }
 
     /**
-     * Get the duration of this work item in minutes.<br>
+     * Get the duration in minutes.<br>
      * <i>Note:</i> It returns -1 if begin or end times are not defined.
      */
     public long durationInMinutes() {
         if ((beginTime == null) || (endTime == null)) return -1;
         return new Duration(beginTime, endTime).getStandardMinutes();
+    }
+
+    /**
+     * Get the duration in hours.<br>
+     * <i>Note:</i> It returns -1 if begin or end times are not defined.
+     */
+    public long durationInHours() {
+        if ((beginTime == null) || (endTime == null)) return -1;
+        return new Duration(beginTime, endTime).getStandardHours();
+    }
+
+    /**
+     * Get the duration in days.<br>
+     * <i>Note:</i> It returns -1 if begin or end times are not defined.
+     */
+    public long durationInDays() {
+        if ((beginTime == null) || (endTime == null)) return -1;
+        return new Duration(beginTime, endTime).getStandardDays();
     }
 
     /** Set the description. */
@@ -91,7 +109,7 @@ public abstract class WorkItem {
     }
 
     /** Set the ending time. */
-    public void setEndTime(DateTime beginTime) {
+    public void setEndTime(DateTime endTime) {
         this.endTime = endTime;
     }
 
