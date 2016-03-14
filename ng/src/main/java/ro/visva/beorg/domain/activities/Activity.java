@@ -1,8 +1,10 @@
 package ro.visva.beorg.domain.activities;
 
-import ro.visva.beorg.domain.plans.Project;
+import ro.visva.beorg.domain.plans.Plan;
 
 /**
+ * An activity may represent a simple action or a note about something that happened.
+ * It may be associated with a Plan or a Task.
  * <br><br>
  * 2016-03-10 22:00 | visvadw | Creation time.
  */
@@ -12,12 +14,13 @@ public class Activity extends WorkItem {
     private Task parentTask;
 
     /** the parent project to whom it belongs */
-    private Project parentProject;
+    private Plan parentPlan;
 
     /** Create a new activity. */
     public Activity(Task parentTask, String name) {
         super(WorkItemType.ACTIVITY, name);
         this.parentTask = parentTask;
+        this.parentTask.addActivity(this);
     }
 
     /** Create a new activity. */
@@ -27,20 +30,21 @@ public class Activity extends WorkItem {
     }
 
     /** Create a new activity. */
-    public Activity(Project parentProject, String name) {
+    public Activity(Plan parentPlan, String name) {
         super(WorkItemType.ACTIVITY, name);
-        this.parentProject = parentProject;
+        this.parentPlan = parentPlan;
+        this.parentPlan.addActivity(this);
     }
 
     /** Create a new activity. */
-    public Activity(Project parentProject, String name, String description) {
-        this(parentProject, name);
+    public Activity(Plan parentPlan, String name, String description) {
+        this(parentPlan, name);
         setDescription(description);
     }
 
     /** Get the parent project this activity belongs to, if any. */
-    public Project parentProject() {
-        return parentProject;
+    public Plan parentProject() {
+        return parentPlan;
     }
 
     /** Get the parent task this activity belongs to, if any. */

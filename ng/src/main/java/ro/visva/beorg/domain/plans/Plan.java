@@ -2,6 +2,7 @@ package ro.visva.beorg.domain.plans;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
+import ro.visva.beorg.domain.activities.Activity;
 import ro.visva.beorg.domain.activities.Task;
 
 import java.util.HashMap;
@@ -20,7 +21,11 @@ public class Plan {
     private PlanType type;
     private PlanState state;
 
-    private Map<String, Task> tasks = new HashMap<>(1);
+    /** the tasks that belong to this plan */
+    private Map<String, Task> tasks = new HashMap<>(1,1);
+
+    /** the activities recorded to this plan */
+    private Map<String, Activity> activities = new HashMap<>(0,1);
 
     private DateTime beginTime;
     private DateTime endTime;
@@ -47,6 +52,18 @@ public class Plan {
     public void removeTask(Task task) {
         if (task == null) return;
         tasks.remove(task.id(), task);
+    }
+
+    /** Add an activity to the plan. */
+    public void addActivity(Activity activity) {
+        if (activity == null) return;
+        activities.put(activity.id(), activity);
+    }
+
+    /** Remove an activity from the plan. */
+    public void removeActivity(Activity activity) {
+        if (activity == null) return;
+        activities.remove(activity.id(), activity);
     }
 
     /** Get the identifier. */
