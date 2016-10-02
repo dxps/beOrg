@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>beOrg</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-  </head>
-  <body>
-    <div class="container"></div>
-  </body>
-  <script src="/bundle.js"></script>
+<head>
+	<meta charset="utf-8">
+	<title>Webix Jet Playground</title>
+	<link rel="icon" type="image/png" href="./assets/img/webix_logo_gray.png">
+	
+	<!-- Webix library -->
+	<script type="text/javascript" src="libs/webix/codebase/webix_debug.js"></script>
+
+	<!-- dynamic themes -->
+	<script type="text/javascript">
+		var user   = webix.remote.$user;
+		var config = (user && user.settings) ? JSON.parse(user.settings): {};
+		var theme = (config.theme || webix.storage.local.get("webix-jet-playground:app:theme") || "siberia:webix").split(":");
+		
+		document.write('<link type="text/css" rel="stylesheet" href="libs/webix/codebase/'+theme[1]+'.css">');
+		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.'+theme[0]+'.less">');
+		console.log(">>> theme:", theme);
+	</script>
+
+	<!-- development only -->
+	<script type="text/javascript" src="libs/less/dist/less.min.js"></script>
+
+	<!-- application logic -->
+	<script type="text/javascript" data-main="app" src="libs/requirejs/require.js"></script>
+
+</head>
+<body></body>
 </html>

@@ -5,7 +5,7 @@ import com.datastax.driver.core.Metadata;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.AuthenticationException;
 import com.datastax.driver.core.exceptions.NoHostAvailableException;
-import ro.visva.beorg.utils.Utils;
+import ro.visva.beorg.commons.Utils;
 
 import java.util.*;
 
