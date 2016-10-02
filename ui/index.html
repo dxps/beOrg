@@ -8,15 +8,16 @@
 	<!-- Webix library -->
 	<script type="text/javascript" src="libs/webix/codebase/webix_debug.js"></script>
 
-	<!-- dynamic themes -->
+	<!-- themes - dynamic and custom login -->
 	<script type="text/javascript">
 		var user   = webix.remote.$user;
 		var config = (user && user.settings) ? JSON.parse(user.settings): {};
 		var theme = (config.theme || webix.storage.local.get("webix-jet-playground:app:theme") || "siberia:webix").split(":");
 		
 		document.write('<link type="text/css" rel="stylesheet" href="libs/webix/codebase/'+theme[1]+'.css">');
-		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.'+theme[0]+'.less">');
-		console.log(">>> theme:", theme);
+		// document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.'+theme[0]+'.less">');
+		// console.log(">>> theme:", theme);
+		document.write('<link type="text/css" rel="stylesheet" href="assets/mm-compact-skin.css">');
 	</script>
 
 	<!-- development only -->
