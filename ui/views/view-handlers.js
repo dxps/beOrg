@@ -5,7 +5,7 @@ define([
 
         var popup, eventId;
 
-        var ui = { view: "datatable", autoConfig: true, editable: true };
+        var ui = { view: "datatable", autoConfig: true, scrollX: false, editable: true };
 
         return {
 

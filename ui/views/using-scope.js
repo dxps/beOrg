@@ -5,7 +5,7 @@ define([
 
         var popup;
 
-        var ui = { view: "datatable", autoConfig: true, editable: true };
+        var ui = { view: "datatable", autoConfig: true, scrollX:false, editable: true };
 
         return {
 
@@ -35,6 +35,7 @@ define([
                 view.parse(records.data);
 
                 console.log('>>> $oninit > created popup, registered to onDataUpdate event of records.data.');
+
             },
 
             /* called when "local" URL is changed */

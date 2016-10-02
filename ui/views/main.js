@@ -21,21 +21,17 @@ define([
 	};
 
     var ui = {
-        type: "line",
+        type: "clean",
 		rows: [
 			{ cols: [
 				{
 					type: "clean", css: "app-left-panel",
-					padding: 4, margin: 0, borderless: true, rows: [ header, menu ]
+					padding: 0, margin: 0, borderless: true, rows: [ header, menu ]
 				},
 				{
 					rows: [
-						{ height: 10 },
-						{ type: "clean", css: "app-right-panel", padding: 4, rows: [ { $subview: true } ] }
+						{ type: "clean", css: "app-right-panel", padding:0, margin:0, rows: [ { $subview: true } ] }
 					]
-				},
-				{
-					width: 10
 				}
 			  ]
 			},

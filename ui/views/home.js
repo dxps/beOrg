@@ -15,7 +15,7 @@ define([], function () {
                     }
                 },
                 {
-                    view: "button", width: 200, value: "Go to the data page",
+                    view: "button", width: 200, value: "Go to Data",
                     click: function () {
                         this.$scope.show("data");
                     }

@@ -14,7 +14,7 @@ define([
     //configuration
     var app = core.create({
         id:         "webix-jet-playground",
-        name:       "Webix Jet Playground",
+        name:       "beOrg",
         version:    "0.1.0",
         debug:      true,
         start:      "/main/home"
