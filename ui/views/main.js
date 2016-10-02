@@ -30,7 +30,11 @@ define([
 				},
 				{
 					rows: [
-						{ type: "clean", css: "app-right-panel", padding:0, margin:0, rows: [ { $subview: true } ] }
+						{ type: "clean", css: "app-right-panel", padding:0, margin:0,
+						  rows: [
+						  	{ $subview: true }
+						  ]
+						}
 					]
 				}
 			  ]
