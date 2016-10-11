@@ -3,7 +3,7 @@
   "license": [
     "MIT"
   ],
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "almond.js",
   "ignore": [
     ".jshintrc",
@@ -11,11 +11,11 @@
     "shrinktest.sh"
   ],
   "homepage": "https://github.com/jrburke/almond",
-  "_release": "0.3.2",
+  "_release": "0.3.3",
   "_resolution": {
     "type": "version",
-    "tag": "0.3.2",
-    "commit": "c0605555873f768ac072fff3f62f3eec0b113ca3"
+    "tag": "0.3.3",
+    "commit": "d4f33a6fdec5c91560a0cd8dcb041dbc72e91a27"
   },
   "_source": "https://github.com/jrburke/almond.git",
   "_target": "~0.3.1",

@@ -1,35 +1,27 @@
-define([], function () {
+define([],function(){
 
-    var views = [
-        { value: "Personal",    id: "personal",    href: "./settings.personal",    icon: "home" },
-        { value: "Application", id: "application", href: "./settings.application", icon: "home" }
-    ];
+	var views = [
+		{ value:"Common Settings", 	 id:"settings-common",   href:"#!/app/settings/settings-common", 	icon:"cog" },
+		{ value:"Personal Settings", id:"settings-personal", href:"#!/app/settings/settings-personal", 	icon:"home" },
+	];
 
-    var settingsTopMenu = {
-        view: "tabbar",
-        id: "settings:menu",
-        options: views,
-        optionWidth: 150,
-        click: function (id) {
-            // this.$scope.show("./" + this.getValue());
-            var settingsMenuItem = this.getValue();
-            var settingsMenuItemIdx = this.optionIndex(settingsMenuItem);
-            console.log('settingsTopMenu click(' + id + '): this.getValue() => ' + settingsMenuItem);
-            console.log('settingsTopMenu click(' + id + '): this.optionIndex(' + settingsMenuItem + ') => ' + settingsMenuItemIdx);
-            this.$scope.show(views[settingsMenuItemIdx].href);
-        }
-    };
+	var menu = {
+		view:"tabbar", id:"settings:menu",
+		options:views, optionWidth:250,
+		click:function(id){
+			this.$scope.show("./"+this.getValue())
+		}
+	};
 
-    var ui = {
-        rows: [
-            settingsTopMenu,
-            { $subview: true }
-        ]
-    };
+	var ui = {
+		rows:[
+			menu,
+			{ $subview:true }
+		]
+	};
 
-    return {
-        $ui: ui,
-        $menu: "settings:menu"
-    };
-
+	return {
+		$ui: ui,
+		$menu: "settings:menu"
+	};
 });

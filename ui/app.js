@@ -1,28 +1,27 @@
 /*
- App configuration
- */
+	App configuration
+*/
 
 define([
-    "libs/webix-jet-core/core",
-    "libs/webix-jet-core/plugins/menu",
-    "libs/webix-jet-core/plugins/theme",
-    "libs/webix-jet-core/plugins/locale"
+	"libs/webix-jet-core/core",
+	"libs/webix-jet-core/plugins/menu",
+	"libs/webix-jet-core/plugins/skin"
 ], function(
-    core, menu, theme, locale
+	core, menu, skin
 ){
 
-    //configuration
-    var app = core.create({
-        id:         "webix-jet-playground",
-        name:       "beOrg",
-        version:    "0.1.0",
-        debug:      true,
-        start:      "/main/home"
-    });
+	// config
+	var app = core.create({
+		id:         "beorg-ui",
+		name:       "beOrg UI",
+		version:    "0.1.0",
+		debug:      true,
+		start:      "/top/start"
+	});
 
-    app.use(menu);
+	app.use(menu);
 
-    app.use(theme);
-    app.use(locale);
-    return app;
+	app.use(skin);
+
+	return app;
 });

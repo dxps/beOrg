@@ -2,29 +2,28 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Webix Jet Playground</title>
-	<link rel="icon" type="image/png" href="./assets/img/webix_logo_gray.png">
-	
-	<!-- Webix library -->
+	<title>BAM XCT</title>
+
+	<!-- Webix Library -->
 	<script type="text/javascript" src="libs/webix/codebase/webix_debug.js"></script>
 
-	<!-- themes - dynamic and custom login -->
+	<!-- Dynamic themes -->
 	<script type="text/javascript">
 		var user   = webix.remote.$user;
 		var config = (user && user.settings) ? JSON.parse(user.settings): {};
-		var theme = (config.theme || webix.storage.local.get("webix-jet-playground:app:theme") || "siberia:webix").split(":");
-		
-		document.write('<link type="text/css" rel="stylesheet" href="libs/webix/codebase/'+theme[1]+'.css">');
-		// document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.'+theme[0]+'.less">');
-		// console.log(">>> theme:", theme);
-		document.write('<link type="text/css" rel="stylesheet" href="assets/mm-compact-skin.css">');
+		var skin = (config.skin || webix.storage.local.get("bam-xct-ui.skin") || "visva-material-clean:skins/visva-material-clean").split(":");
+
+		document.write('<link type="text/css" rel="stylesheet" href="libs/webix/codebase/' + skin[1] + '.css">');
+		document.write('<link type="text/css" rel="stylesheet/less" href="assets/skins/skin.' + skin[0] + '.less">');
 	</script>
 
-	<!-- development only -->
+	<!-- Development only -->
 	<script type="text/javascript" src="libs/less/dist/less.min.js"></script>
 
-	<!-- application logic -->
+	<!-- The app's logic -->
 	<script type="text/javascript" data-main="app" src="libs/requirejs/require.js"></script>
+
+	<link rel="icon" href="/assets/logo/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
 
 </head>
 <body></body>
