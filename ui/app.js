@@ -16,7 +16,7 @@ define([
         name: "beOrg UI",
         version: "0.1.0",
         debug: true,
-        start: "/top/start"
+        start: "/app"
     });
 
     app.use(menu);
