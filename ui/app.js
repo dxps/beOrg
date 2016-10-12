@@ -7,6 +7,9 @@ define([
     menu,
     skin) {
 
+    if (!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
+        webix.CustomScroll.init();
+
     // the app.config
     var app = core.create({
         id: "beorg-ui",
