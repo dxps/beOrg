@@ -1,4 +1,4 @@
-package ro.visva.beorg.domain.repos;
+package ro.visva.beorg.domain.model.repos;
 
 import ro.visva.beorg.infra.repos.RepoConnector;
 import ro.visva.beorg.infra.repos.RepoConnectorError;

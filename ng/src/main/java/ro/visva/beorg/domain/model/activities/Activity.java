@@ -1,6 +1,6 @@
-package ro.visva.beorg.domain.activities;
+package ro.visva.beorg.domain.model.activities;
 
-import ro.visva.beorg.domain.plans.Plan;
+import ro.visva.beorg.domain.model.plans.Plan;
 
 /**
  * An activity may represent a simple action or a note about something that happened.

@@ -1,7 +1,7 @@
-package ro.visva.beorg.domain;
+package ro.visva.beorg.domain.model;
 
 import org.joda.time.DateTime;
-import ro.visva.beorg.domain.activities.WorkItemState;
+import ro.visva.beorg.domain.model.activities.WorkItemState;
 
 /**
  * An event is the foundation of anything that may happen.<br>

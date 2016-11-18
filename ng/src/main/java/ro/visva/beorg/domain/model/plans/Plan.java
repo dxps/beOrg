@@ -1,9 +1,9 @@
-package ro.visva.beorg.domain.plans;
+package ro.visva.beorg.domain.model.plans;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
-import ro.visva.beorg.domain.activities.Activity;
-import ro.visva.beorg.domain.activities.Task;
+import ro.visva.beorg.domain.model.activities.Activity;
+import ro.visva.beorg.domain.model.activities.Task;
 
 import java.util.HashMap;
 import java.util.Map;

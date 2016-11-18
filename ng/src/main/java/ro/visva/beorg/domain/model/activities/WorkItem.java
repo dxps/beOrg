@@ -1,8 +1,8 @@
-package ro.visva.beorg.domain.activities;
+package ro.visva.beorg.domain.model.activities;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
-import ro.visva.beorg.domain.IdentityFactory;
+import ro.visva.beorg.domain.model.IdentityFactory;
 
 /**
  * WorkItem is the base of any Activity or Task.

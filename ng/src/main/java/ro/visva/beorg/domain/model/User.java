@@ -1,4 +1,4 @@
-package ro.visva.beorg.domain;
+package ro.visva.beorg.domain.model;
 
 import java.io.Serializable;
 

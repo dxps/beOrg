@@ -1,4 +1,4 @@
-package ro.visva.beorg.domain.plans;
+package ro.visva.beorg.domain.model.plans;
 
 import java.util.EnumSet;
 import java.util.HashMap;

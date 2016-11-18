@@ -1,4 +1,4 @@
-package ro.visva.beorg.domain.activities;
+package ro.visva.beorg.domain.model.activities;
 
 import ro.visva.beorg.domain.plans.Project;
 
