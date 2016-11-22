@@ -10,12 +10,26 @@ import java.util.Map;
  */
 public enum WorkItemState {
 
+    /** WorkItem is created. */
     CREATED((byte) 0, "Created"),
-    STARTED((byte) 1, "Started"),
-    IN_PROGRESS((byte) 2, "In Progress"),
-    DONE((byte) 3, "Done"),
-    CANCELED((byte) 4, "Canceled"),
-    POSTPONED((byte) 5, "Postponed");
+
+    /** WorkItem is assigned to a user or group. */
+    ASSIGNED((byte) 1, "Assigned"),
+
+    /** WorkItem has been started. */
+    STARTED((byte) 2, "Started"),
+
+    /** WorkItem is in progress. */
+    IN_PROGRESS((byte) 3, "In Progress"),
+
+    /** WorkItem is done (complete). */
+    DONE((byte) 4, "Done"),
+
+    /** WorkItem is canceled. */
+    CANCELED((byte) 5, "Canceled"),
+
+    /** WorkItem is postponed. */
+    POSTPONED((byte) 6, "Postponed");
 
     private byte id;
     private String name;
@@ -25,7 +39,7 @@ public enum WorkItemState {
         this.name = name;
     }
 
-    private static final Map<Byte, WorkItemState> reverseLookup = new HashMap<>(6);
+    private static final Map<Byte, WorkItemState> reverseLookup = new HashMap<>(7);
 
     static {
         for (WorkItemState workItemState : EnumSet.allOf(WorkItemState.class))
