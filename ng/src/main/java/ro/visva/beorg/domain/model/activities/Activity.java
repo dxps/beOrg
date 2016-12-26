@@ -3,7 +3,7 @@ package ro.visva.beorg.domain.model.activities;
 import ro.visva.beorg.domain.model.plans.Plan;
 
 /**
- * An activity may represent a simple action or a note about something that happened.
+ * An activity represents a simple action or a note about something that happened.
  * It may be associated with a Plan or a Task.
  * <br><br>
  * 2016-03-10 22:00 | visvadw | Creation time.

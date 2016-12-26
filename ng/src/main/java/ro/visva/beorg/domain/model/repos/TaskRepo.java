@@ -6,6 +6,7 @@ import ro.visva.beorg.domain.model.plans.Plan;
 import java.util.List;
 
 /**
+ * Task repository is used for administering the tasks.
  * <br><br>
  * 2016-03-13 17:08 | visvadw | Creation time.
  */

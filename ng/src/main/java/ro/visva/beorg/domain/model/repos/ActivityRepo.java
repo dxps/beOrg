@@ -6,6 +6,7 @@ import ro.visva.beorg.domain.model.activities.Task;
 import java.util.List;
 
 /**
+ * Activity repository is used for administering the activities.
  * <br><br>
  * 2016-03-13 16:47 | visvadw | Creation time.
  */
