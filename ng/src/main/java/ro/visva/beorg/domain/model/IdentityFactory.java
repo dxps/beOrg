@@ -8,6 +8,10 @@ import java.util.UUID;
  */
 public class IdentityFactory {
 
+    /** 
+     * Create a new identifier.
+     * @return A unique identifier (UUID).
+     * */
     public static String createId() {
         return UUID.randomUUID().toString();
     }

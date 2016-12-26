@@ -10,8 +10,8 @@ import java.util.Map;
  */
 public enum WorkItemType {
 
-    TASK((byte) 0, "Task"),
-    ACTIVITY((byte) 1, "Activity");
+    TASK_TYPE((byte) 0, "Task"),
+    ACTIVITY_TYPE((byte) 1, "Activity");
 
     private byte id;
     private String name;

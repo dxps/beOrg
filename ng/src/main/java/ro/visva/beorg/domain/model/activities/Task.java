@@ -1,6 +1,6 @@
 package ro.visva.beorg.domain.model.activities;
 
-import ro.visva.beorg.domain.plans.Project;
+import ro.visva.beorg.domain.model.plans.Project;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +23,7 @@ public class Task extends WorkItem implements Comparable<Task> {
 
     /** Create a new task. */
     public Task(Project project, String name) {
-        super(WorkItemType.TASK, name);
+        super(WorkItemType.TASK_TYPE, name);
         this.project = project;
         this.project.addTask(this);
     }
@@ -36,7 +36,7 @@ public class Task extends WorkItem implements Comparable<Task> {
 
     /** Create a new task. */
     public Task(Task parentTask, String name) {
-        super(WorkItemType.TASK, name);
+        super(WorkItemType.TASK_TYPE, name);
         this.project = parentTask.project();
         this.parentTask = parentTask;
         this.parentTask.addSubtask(this);

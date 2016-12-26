@@ -18,7 +18,7 @@ public class Activity extends WorkItem {
 
     /** Create a new activity. */
     public Activity(Task parentTask, String name) {
-        super(WorkItemType.ACTIVITY, name);
+        super(WorkItemType.ACTIVITY_TYPE, name);
         this.parentTask = parentTask;
         this.parentTask.addActivity(this);
     }
@@ -31,7 +31,7 @@ public class Activity extends WorkItem {
 
     /** Create a new activity. */
     public Activity(Plan parentPlan, String name) {
-        super(WorkItemType.ACTIVITY, name);
+        super(WorkItemType.ACTIVITY_TYPE, name);
         this.parentPlan = parentPlan;
         this.parentPlan.addActivity(this);
     }

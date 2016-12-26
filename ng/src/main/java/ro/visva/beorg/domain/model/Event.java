@@ -4,9 +4,9 @@ import org.joda.time.DateTime;
 import ro.visva.beorg.domain.model.activities.WorkItemState;
 
 /**
- * An event is the foundation of anything that may happen.<br>
+ * An event is the basic element describing something that happened.<br/>
  * It can be any change that happened to a task, a new activity, and so on.
- * <br><br>
+ * <br/><br/>
  * 2016-03-10 22:06 | visvadw | Creation time.
  */
 public class Event {

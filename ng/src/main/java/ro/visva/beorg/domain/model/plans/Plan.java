@@ -12,7 +12,7 @@ import java.util.Map;
  * <br><br>
  * 2016-03-12 21:41 | visvadw | Creation time.
  */
-public class Plan {
+public abstract class Plan {
 
     private String id;
     private String name;
