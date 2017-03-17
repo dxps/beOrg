@@ -1,30 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>BAM XCT</title>
-
-	<!-- Webix Library -->
-	<script type="text/javascript" src="libs/webix/codebase/webix_debug.js"></script>
-
-	<!-- Dynamic themes -->
-	<script type="text/javascript">
-		var user   = webix.remote.$user;
-		var config = (user && user.settings) ? JSON.parse(user.settings): {};
-		var skin = (config.skin || webix.storage.local.get("bam-xct-ui.skin") || "visva-material-clean:skins/visva-material-clean").split(":");
-
-		document.write('<link type="text/css" rel="stylesheet" href="libs/webix/codebase/' + skin[1] + '.css">');
-		document.write('<link type="text/css" rel="stylesheet/less" href="assets/skins/skin.' + skin[0] + '.less">');
-	</script>
-
-	<!-- Development only -->
-	<script type="text/javascript" src="libs/less/dist/less.min.js"></script>
-
-	<!-- The app's logic -->
-	<script type="text/javascript" data-main="app" src="libs/requirejs/require.js"></script>
-
-	<link rel="icon" href="/assets/logo/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
-
-</head>
-<body></body>
+  <head>
+    <meta charset="utf-8">
+    <title>ui</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
