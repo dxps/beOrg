@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-32.94117647058822" y="52.882352941176435">ro.visva.beorg.domain.model.plans.Plan</node>
+    <node x="95.23529411764707" y="112.94117647058823">ro.visva.beorg.domain.model.activities.Activity</node>
+    <node x="208.70588235294116" y="52.41176470588235">ro.visva.beorg.domain.model.activities.WorkItem</node>
+    <node x="104.6470588235294" y="-8.235294117647058">ro.visva.beorg.domain.model.activities.Task</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ro.visva.beorg.domain.model.plans.Plan" target="ro.visva.beorg.domain.model.activities.Task">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.activities.Activity" target="ro.visva.beorg.domain.model.plans.Plan">
+      <point x="0.0" y="5.095694670134037" />
+      <point x="0.0" y="5.095694670134023" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.activities.Task" target="ro.visva.beorg.domain.model.activities.Activity">
+      <point x="4.472135954999601" y="-2.2360679774997863" />
+      <point x="4.4721359549995725" y="-2.2360679774998005" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.activities.Task" target="ro.visva.beorg.domain.model.activities.WorkItem">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.plans.Plan" target="ro.visva.beorg.domain.model.activities.Activity">
+      <point x="0.9644474860972423" y="-4.906102429277311" />
+      <point x="0.9644474860972423" y="-4.906102429277297" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.activities.Activity" target="ro.visva.beorg.domain.model.activities.Task">
+      <point x="-5.5901699437494585" y="0.0" />
+      <point x="-5.590169943749515" y="0.0" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.activities.Activity" target="ro.visva.beorg.domain.model.activities.WorkItem">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.7000000000000006" x="137.0" y="68.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
