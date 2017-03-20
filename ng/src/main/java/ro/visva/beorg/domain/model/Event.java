@@ -1,7 +1,7 @@
 package ro.visva.beorg.domain.model;
 
 import org.joda.time.DateTime;
-import ro.visva.beorg.domain.model.activities.WorkItemState;
+import ro.visva.beorg.domain.model.tasks.WorkItemState;
 
 /**
  * An event is the basic element describing something that happened.<br/>

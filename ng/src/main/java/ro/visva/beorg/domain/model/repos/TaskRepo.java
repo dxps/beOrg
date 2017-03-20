@@ -1,6 +1,6 @@
 package ro.visva.beorg.domain.model.repos;
 
-import ro.visva.beorg.domain.model.activities.Task;
+import ro.visva.beorg.domain.model.tasks.Task;
 import ro.visva.beorg.domain.model.plans.Plan;
 
 import java.util.List;

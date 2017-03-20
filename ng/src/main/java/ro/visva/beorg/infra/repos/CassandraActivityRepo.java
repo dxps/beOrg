@@ -1,7 +1,7 @@
 package ro.visva.beorg.infra.repos;
 
-import ro.visva.beorg.domain.model.activities.Activity;
-import ro.visva.beorg.domain.model.activities.Task;
+import ro.visva.beorg.domain.model.tasks.Activity;
+import ro.visva.beorg.domain.model.tasks.Task;
 import ro.visva.beorg.domain.model.repos.ActivityRepo;
 
 import java.util.List;

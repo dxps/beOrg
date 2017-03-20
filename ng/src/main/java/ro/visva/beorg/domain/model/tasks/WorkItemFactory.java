@@ -1,6 +1,6 @@
-package ro.visva.beorg.domain.model.activities;
+package ro.visva.beorg.domain.model.tasks;
 
-import ro.visva.beorg.domain.plans.Project;
+import ro.visva.beorg.domain.model.plans.Plan;
 
 /**
  * <br><br>
@@ -15,19 +15,19 @@ public class WorkItemFactory {
     /**
      * Create a new task.
      *
-     * @param project     The project to whom the task will belong.
+     * @param plan        The plan this task will belong.
      * @param name        The name of the task.
      * @param description The description of the task.
      * @return The newly created task.
      */
-    public static Task createTask(Project project, String name, String description) {
-        return new Task(project, name, description);
+    public static Task createTask(Plan plan, String name, String description) {
+        return new Task(plan, name, description);
     }
 
     /**
      * Create a new subtask.
      *
-     * @param parentTask The parent task it belongs to.
+     * @param parentTask  The parent task it belongs to.
      * @param name        The name of the task.
      * @param description The description of the task.
      * @return The newly created task.
@@ -39,13 +39,13 @@ public class WorkItemFactory {
     /**
      * Create a new task.
      *
-     * @param project The project this activity belongs to.
-     * @param name The name of the activity.
-     * @param description The description of the activity.
+     * @param plan         The plan this activity belongs to.
+     * @param name         The name of the activity.
+     * @param description  The description of the activity.
      * @return The newly created activity.
      */
-    public static Activity createActivity(Project project, String name, String description) {
-        return new Activity(project, name, description);
+    public static Activity createActivity(Plan plan, String name, String description) {
+        return new Activity(plan, name, description);
     }
 
 }

@@ -9,12 +9,12 @@ public class Project extends Plan {
 
     /** Create a new project. */
     public Project(String name) {
-        super(PlanType.PLAN, name);
+        super(PlanType.PROJECT, name);
     }
 
     /** Create a new project. */
     public Project(String name, String description) {
-        super(PlanType.PLAN, name, description);
+        super(PlanType.PROJECT, name, description);
     }
     
 }

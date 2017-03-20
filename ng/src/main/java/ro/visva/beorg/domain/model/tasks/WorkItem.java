@@ -1,4 +1,4 @@
-package ro.visva.beorg.domain.model.activities;
+package ro.visva.beorg.domain.model.tasks;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
