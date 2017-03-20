@@ -33,7 +33,7 @@ public class WorkItemFactory {
      * @return The newly created task.
      */
     public static Task createSubtask(Task parentTask, String name, String description) {
-        return new Task(parentTask.project(), name, description);
+        return new Task(parentTask.parentPlan(), name, description);
     }
 
     /**

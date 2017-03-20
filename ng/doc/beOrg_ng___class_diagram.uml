@@ -3,43 +3,52 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="-32.94117647058822" y="52.882352941176435">ro.visva.beorg.domain.model.plans.Plan</node>
-    <node x="95.23529411764707" y="112.94117647058823">ro.visva.beorg.domain.model.activities.Activity</node>
-    <node x="208.70588235294116" y="52.41176470588235">ro.visva.beorg.domain.model.activities.WorkItem</node>
-    <node x="104.6470588235294" y="-8.235294117647058">ro.visva.beorg.domain.model.activities.Task</node>
+    <node x="52.0" y="-66.0">ro.visva.beorg.domain.model.plans.Plan</node>
+    <node x="-49.0" y="19.0">ro.visva.beorg.domain.model.activities.Activity</node>
+    <node x="44.0" y="-166.0">ro.visva.beorg.domain.model.plans.Project</node>
+    <node x="36.0" y="138.0">ro.visva.beorg.domain.model.activities.WorkItem</node>
+    <node x="136.0" y="20.0">ro.visva.beorg.domain.model.activities.Task</node>
   </nodes>
   <notes />
   <edges>
     <edge source="ro.visva.beorg.domain.model.plans.Plan" target="ro.visva.beorg.domain.model.activities.Task">
+      <point x="0.0" y="-5.000218354914178" />
+      <point x="0.0" y="-5.000218354914178" />
+    </edge>
+    <edge source="ro.visva.beorg.domain.model.plans.Project" target="ro.visva.beorg.domain.model.plans.Plan">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
     <edge source="ro.visva.beorg.domain.model.activities.Activity" target="ro.visva.beorg.domain.model.plans.Plan">
-      <point x="0.0" y="5.095694670134037" />
-      <point x="0.0" y="5.095694670134023" />
+      <point x="4.665277846935435" y="1.7986613385775172" />
+      <point x="4.665277846935439" y="1.7986613385775172" />
     </edge>
     <edge source="ro.visva.beorg.domain.model.activities.Task" target="ro.visva.beorg.domain.model.activities.Activity">
-      <point x="4.472135954999601" y="-2.2360679774997863" />
-      <point x="4.4721359549995725" y="-2.2360679774998005" />
+      <point x="-6.702972992544105" y="0.0" />
+      <point x="-6.702972992544087" y="0.0" />
     </edge>
     <edge source="ro.visva.beorg.domain.model.activities.Task" target="ro.visva.beorg.domain.model.activities.WorkItem">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
     <edge source="ro.visva.beorg.domain.model.plans.Plan" target="ro.visva.beorg.domain.model.activities.Activity">
-      <point x="0.9644474860972423" y="-4.906102429277311" />
-      <point x="0.9644474860972423" y="-4.906102429277297" />
+      <point x="-5.3587376401219515" y="0.0" />
+      <point x="-5.358737640121944" y="0.0" />
     </edge>
     <edge source="ro.visva.beorg.domain.model.activities.Activity" target="ro.visva.beorg.domain.model.activities.Task">
-      <point x="-5.5901699437494585" y="0.0" />
-      <point x="-5.590169943749515" y="0.0" />
+      <point x="3.729688308129573" y="-3.330078846544261" />
+      <point x="3.7296883081295675" y="-3.330078846544261" />
     </edge>
     <edge source="ro.visva.beorg.domain.model.activities.Activity" target="ro.visva.beorg.domain.model.activities.WorkItem">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
+    <edge source="ro.visva.beorg.domain.model.activities.Task" target="ro.visva.beorg.domain.model.plans.Plan">
+      <point x="-0.04672693135159989" y="4.999781654621174" />
+      <point x="-0.04672693135159989" y="4.999781654621174" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.7000000000000006" x="137.0" y="68.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="165.0" y="98.5" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>

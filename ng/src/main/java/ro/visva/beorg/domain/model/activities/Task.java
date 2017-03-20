@@ -1,5 +1,6 @@
 package ro.visva.beorg.domain.model.activities;
 
+import ro.visva.beorg.domain.model.plans.Plan;
 import ro.visva.beorg.domain.model.plans.Project;
 
 import java.util.HashMap;
@@ -11,7 +12,7 @@ import java.util.Map;
  */
 public class Task extends WorkItem implements Comparable<Task> {
 
-    private Project project;
+    private Plan parentPlan;
 
     private Task parentTask;
 
@@ -19,47 +20,45 @@ public class Task extends WorkItem implements Comparable<Task> {
 
     private Map<String, Activity> activities = new HashMap<>(1, 1);
 
-    private int hashPrimeValue = 19;
-
     /** Create a new task. */
-    public Task(Project project, String name) {
+    public Task(Project parentPlan, String name) {
         super(WorkItemType.TASK_TYPE, name);
-        this.project = project;
-        this.project.addTask(this);
+        this.parentPlan = parentPlan;
+        this.parentPlan.addTask(this);
     }
 
     /** Create a new task. */
-    public Task(Project project, String name, String description) {
-        this(project, name);
+    public Task(Project parentPlan, String name, String description) {
+        this(parentPlan, name);
         setDescription(description);
     }
 
-    /** Create a new task. */
+    /** Create a new subtask. */
     public Task(Task parentTask, String name) {
         super(WorkItemType.TASK_TYPE, name);
-        this.project = parentTask.project();
+        this.parentPlan = parentTask.parentPlan();
         this.parentTask = parentTask;
         this.parentTask.addSubtask(this);
     }
 
-    /** Create a new task. */
+    /** Create a new subtask. */
     public Task(Task parentTask, String name, String description) {
         this(parentTask, name);
         setDescription(description);
     }
 
 
-    /** Get the project this task belongs to. */
-    public Project project() {
-        return project;
+    /** Get the parent plan this task belongs to. */
+    public Plan parentPlan() {
+        return parentPlan;
     }
 
-    /** Get the parent task, in case of a subtask. */
+    /** Get the parent task, this subtask belongs to. */
     public Task parentTask() {
         return parentTask;
     }
 
-    /** Set the parent task, in case of a subtask. */
+    /** Set the parent task of this subtask. */
     public Task setParentTask(Task parentTask) {
         if (parentTask != null)  this.parentTask = parentTask;
         return this;
@@ -127,8 +126,9 @@ public class Task extends WorkItem implements Comparable<Task> {
     @Override
     public int hashCode() {
 
+        int hashPrimeValue = 19;
         int hashCodeValue =
-                +(57691 * this.hashPrimeValue)
+                +(57691 * hashPrimeValue)
                         + this.name().hashCode()
                         + this.description().hashCode()
                         + this.id().hashCode();
